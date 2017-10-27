@@ -15,7 +15,7 @@ RUN apk add --no-cache python3 && \
 RUN pip3 install awscli
 
 # 環境変数の設定
-ENV TZ=Asia/Tokyo HOME=/home/node NODE_ENV=development
+ENV TZ=Asia/Tokyo HOME=/home/node
 
 # 一般ユーザに切り替え
 USER node
