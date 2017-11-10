@@ -1,5 +1,5 @@
 # ベースイメージ
-FROM node:8.8.1-alpine
+FROM node:8.9.1-alpine
 
 # Pythonインストール
 # from frolvlad/alpine-python3
