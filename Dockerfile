@@ -1,6 +1,9 @@
 # ベースイメージ
 FROM node:8.9.1-alpine
 
+# 証明書機能の追加インストール
+RUN apk add --no-cache ca-certificates
+
 # Pythonインストール
 # from frolvlad/alpine-python3
 RUN apk add --no-cache python3 && \
@@ -15,7 +18,8 @@ RUN apk add --no-cache python3 && \
 RUN pip3 install awscli
 
 # 環境変数の設定
-ENV TZ=Asia/Tokyo HOME=/home/node
+# yarn global binのPATHを通す
+ENV TZ=Asia/Tokyo HOME=/home/node PATH=$PATH:/home/node/.yarn/bin
 
 # 一般ユーザに切り替え
 USER node
