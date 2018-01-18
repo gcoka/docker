@@ -25,4 +25,7 @@ ENV TZ=Asia/Tokyo HOME=/home/node PATH=$PATH:/home/node/.yarn/bin
 USER node
 WORKDIR $HOME
 
+# serverlessコマンド追加
+RUN yarn global add serverless
+
 CMD ["/bin/sh"]
