@@ -1,5 +1,5 @@
 # ベースイメージ
-FROM node:8.9.1-alpine
+FROM node:8.9.4-alpine
 
 # 証明書機能の追加インストール
 RUN apk add --no-cache ca-certificates

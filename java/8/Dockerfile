@@ -1,4 +1,4 @@
-FROM gcoka/node-aws:8.9.1
+FROM gcoka/node-aws:8.9.4
 
 # 追加インストールのためにrootに戻す
 USER root
